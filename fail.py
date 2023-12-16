@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, send_file
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 from contextlib import contextmanager
-import locale
 import io
 import threading
 from queue import Queue
