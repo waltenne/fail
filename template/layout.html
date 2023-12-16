@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/image/favicon.ico">
+    <title>{% block title%} {% endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <section>          
+            <div class='air air1'></div>
+            <div class='air air2'></div>
+            <div class='air air3'></div>     
+        </section>
+        
+        <div id="navigation-bar">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('certificado') }}">Certificados</a>
+            <a href="{{ url_for('about') }}">Sobre</a>
+        </div>
+    </header>
+
+    <div id="content">
+        {% block body %} {% endblock %}
+    </div>
+    
+    <footer>
+        <font color="red">F</font>aculdade de <font color="red">A</font>tividades <font color="red">I</font>nterativas e <font color="red">L</font>údicas. 2023
+    </footer>
+</body>
+</html>

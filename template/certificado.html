@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %} Faculdade de Atividades Interativas e Lúdicas {% endblock %}
+
+{% block body %}
+<div class="container">    
+    <div class="row justify-content-center">
+
+        <h4 class="mt-1 text-center">Insira os dados abaixo</h4>
+        <form action="/gerar-certificado" method="post" class="d-flex justify-content-center" target="_blank">
+            <div class="col-md-3">
+                <label for="nome" class="form-label mb-3">Nome Completo</label>
+                <input type="text" class="form-control form-control-sm" id="nome" name="nome" required>
+            </div>
+                     
+            <div class="col-md-3">
+                <label for="curso" class="form-label mb-3">Nome do Curso</label>
+                <select class="form-select form-select-sm" id="curso" name="curso" required>
+                    <option value="" selected disabled>Escolha um curso</option>
+                    <option value="Gambiarra">Gambiarra</option>
+                    <option value="Go Horse">Go Horse</option>
+                    <option value="Sinuca">Sinuca</option>
+                    <option value="Dominó">Dominó</option>
+                    <option value="Cachaça">Cachaça</option>
+                    <option value="Agiotagem">Agiotagem</option>
+                    <option value="Jogo do Bixo">Jogo do Bixo</option>
+                    <option value="Design de Realidades Virtuais">Design de Realidades Virtuais</option>
+                    <option value="Astronomia Recreativa">Astronomia Recreativa</option>
+                    <option value="Culinária Experimental com Jogos">Culinária Experimental com Jogos</option>
+                    <option value="Mágica da Programação">Mágica da Programação</option>
+                    <option value="Escultura com Balões Avançada">Escultura com Balões Avançada</option>
+                    <option value="Dança das Cadeiras Elétricas">Dança das Cadeiras Elétricas</option>
+                    <option value="Tabuleiro">Tabuleiro</option>
+                    <option value="Cartas">Cartas</option>
+                    <option value="Videogame">Videogame</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Tabuleiro de Estratégia">Tabuleiro de Estratégia</option>
+                    <option value="Cartas de Estratégia">Cartas de Estratégia</option>
+                    <option value="Videogame de Estratégia">Videogame de Estratégia</option>
+                    <option value="RPG de Mesa">RPG de Mesa</option>
+                </select>
+                
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary btn-sm">Gerar Certificado</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
