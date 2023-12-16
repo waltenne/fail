@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, send_file
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 from contextlib import contextmanager
-import locale
 import io
 import threading
 from queue import Queue
@@ -12,8 +11,6 @@ posicao_curso = 920
 posicao_data = 1270
 fonte = 'Inter.ttf'
 tamanho_fonte = 60
-
-locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
 
 data_desejada = datetime.now()
 data_formatada = data_desejada.strftime("%d de %B de %Y")
