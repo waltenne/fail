@@ -13,8 +13,6 @@ posicao_data = 1270
 fonte = 'Inter.ttf'
 tamanho_fonte = 60
 
-locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
-
 data_desejada = datetime.now()
 data_formatada = data_desejada.strftime("%d de %B de %Y")
 
